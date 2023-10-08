@@ -1,0 +1,28 @@
+﻿  Weryfikowanie źródeł
+  Zdalne kopiowanie źródeł do lokalizacji „192.168.0.114”
+  Weryfikowanie architektury
+  Weryfikowanie architektury
+  Rozpoczynanie kompilacji zdalnej
+  Kompilowanie źródeł:
+  game.cpp
+C:\Users\mateu\source\repos\Slots\Slots\game.cpp(18,32): error : no matching function for call to ‘Lines::Lines(<brace-enclosed initializer list>)’
+C:\Users\mateu\source\repos\Slots\Slots\game.cpp(18,32): error :   creditOutFile_{ creditOutFile } {}
+C:\Users\mateu\source\repos\Slots\Slots\game.cpp(18,32): error :                                 ^
+C:\Users\mateu\source\repos\Slots\Slots\game.cpp(18,32): message : candidates are:
+C:\Users\mateu\source\repos\Slots\Slots\lines.h(27,2): message : Lines::Lines(int)
+C:\Users\mateu\source\repos\Slots\Slots\lines.h(27,2): message :   Lines(int numLines);
+C:\Users\mateu\source\repos\Slots\Slots\lines.h(27,2): message :   ^
+C:\Users\mateu\source\repos\Slots\Slots\lines.h(27,2): message : candidate expects 1 argument, 2 provided
+C:\Users\mateu\source\repos\Slots\Slots\lines.h(25,7): message : Lines::Lines(const Lines&)
+C:\Users\mateu\source\repos\Slots\Slots\lines.h(25,7): message :  class Lines {
+C:\Users\mateu\source\repos\Slots\Slots\lines.h(25,7): message :        ^
+C:\Users\mateu\source\repos\Slots\Slots\lines.h(25,7): message : candidate expects 1 argument, 2 provided
+C:\Users\mateu\source\repos\Slots\Slots\lines.h(25,7): message : Lines::Lines(Lines&&)
+C:\Users\mateu\source\repos\Slots\Slots\lines.h(25,7): message : candidate expects 1 argument, 2 provided
+C:\Users\mateu\source\repos\Slots\Slots\game.cpp(41,50): error : no matching function for call to ‘Paytable::get_payout(std::vector<Symbol>&, const Line&)’
+C:\Users\mateu\source\repos\Slots\Slots\game.cpp(41,50): error :    winAmount += paytable_.get_payout(symbols, line).payout;
+C:\Users\mateu\source\repos\Slots\Slots\game.cpp(41,50): error :                                                   ^
+C:\Users\mateu\source\repos\Slots\Slots\game.cpp(41,50): message : candidate is:
+C:\Users\mateu\source\repos\Slots\Slots\paytable.h(23,12): message : Paytable::Payout Paytable::get_payout(std::vector<Symbol>, unsigned int) const
+C:\Users\mateu\source\repos\Slots\Slots\paytable.h(23,12): message : no known conversion for argument 2 from ‘const Line’ to ‘unsigned int’
+  lines.cpp
